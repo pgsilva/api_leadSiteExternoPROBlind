@@ -1,0 +1,301 @@
+FORMULÁRIOS (CUIDADO POIS ESTÃO COM AS CLASSES DE UM TEMPLATE)
+
+
+  <!-- ====================================== ORÇAMENTO PROBLIND ====================================== -->
+
+  <div class="modal fade" id="modalorc" tabindex="-1" role="dialog"> 
+    <!-- Modal Dialog -->
+    <div class="modal-dialog" role="document"> 
+      <!-- Modal Content -->
+      <div class="modal-content"> 
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">Solicitar orçamento:</h4>
+        </div>
+        <!-- /End Modal Header --> 
+        <!-- Modal Body -->
+        <div class="modal-body"> 
+          <!-- col-md-12 -->
+          <div class="col-md-12"> 
+            <!-- Contact Form Block -->
+            <div class="form-block contact-form-block"> 
+              <!-- Form Block Container -->
+              <div class="form-block-container"> 
+				  
+				  
+                <!-- Form -->
+            <form  id="formlead" action="" novalidate="novalidate">
+                  <input type="text" value="false" name="fgIsOficina" style="display: none;">
+                  <input type="text" value="site" name="dsCanal" style="display: none;">
+                  
+                  <!-- Name -->
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="form_nome">Nome *</label>
+                      <input type="text" class="form-control" maxlength="100" name="nmCliente">
+                    </div>
+                  </div>
+                  <!-- /End Name --> 
+                  
+                  <!-- email -->
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Email *</label>
+                      <input type="email" class="form-control" maxlength="100" name="dsEmail">
+                    </div>
+                  </div>
+                  <!-- /End email --> 
+                  
+                  <!-- telcomercial -->
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Telefone </label>
+                      <input type="number" class="form-control" name="nrTelComercial" id="telefone" placeholder="(99) 9999-9999">
+                    </div>
+                  </div>
+                  <!-- /End telcomercial --> 
+                  
+                  <!-- celular -->
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Celular *</label>
+                      <input type="number" class="form-control" name="nrTelCelular" id="celular" placeholder="(99) 99999-9999">
+                    </div>
+                  </div>
+                  <!-- /End celular --> 
+                  
+                  <!-- resposta -->
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Deseja ser contatado via *</label><br>
+                      <select class="form-control" name="dsTipoAtendimento">
+                      <option value="e-mail">E-mail </option>
+                      <option value="telefone">Telefone </option>
+                      <option value="local">Local </option>
+                      <option value="aplicativo">Aplicativo </option>
+                      </select>
+                    </div>
+                  </div>
+                  <!-- /End resposta --> 
+                  
+                  <!-- veiculo -->
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Veículo *</label>
+                      <input type="text" class="form-control" name="dsVeiculo">
+                    </div>
+                  </div>
+                  <!-- /End veiculo --> 
+                  
+                  <!-- Message -->
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label>Mensagem *</label>
+                      <textarea class="form-control" name="dsObservacao" maxlength="2000" placeholder="(Digite aqui sua mensagem e o nome da blindagem que você deseja orçamento.)"></textarea>
+                    </div>
+                  </div>
+                  <!-- /End Message --> 
+                  
+                  <!-- Submit Button -->
+                  <div class="col-md-12"> 
+                    <!-- Form Group -->
+                    <div class="form-group">
+                      <input type="button" class="btn btn-gfort" id="BTEnvia" value="ENVIAR">
+                    </div>
+                    <!-- /End Form Group --> 
+                  </div>
+                  <!-- /End Submit Button -->
+                </form>
+                <!-- /End Form --> 
+              </div>
+              <!-- /End Form Block Container --> 
+            </div>
+            <!-- /End Contact Form Block --> 
+          </div>
+          <!-- /End col-md-12 --> 
+        </div>
+        <!-- /End Modal Body --> 
+        
+      </div>
+      <!-- /End Modal Content --> 
+    </div>
+    <!-- /End Modal Dialog --> 
+  </div>
+  <!-- ====================================== /End ORÇAMENTO PROBLIND ====================================== -->
+  
+	
+
+  <!-- ====================================== ASSIST PROBLIND  ====================================== -->
+  <div class="modal fade" id="modalat" tabindex="-1" role="dialog"> 
+    <!-- Modal Dialog -->
+    <div class="modal-dialog" role="document"> 
+      <!-- Modal Content -->
+      <div class="modal-content"> 
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">Solicitar assistência técnica:</h4>
+        </div>
+        <!-- /End Modal Header --> 
+        <!-- Modal Body -->
+        <div class="modal-body"> 
+          <!-- col-md-12 -->
+          <div class="col-md-12"> 
+            <!-- Contact Form Block -->
+            <div class="form-block contact-form-block"> 
+              <!-- Form Block Container -->
+              <div class="form-block-container"> 
+				  
+				  
+                <!-- Form -->
+            	<form  id="formlead" action="" novalidate="novalidate">
+                  <input type="text" value="true" name="fgIsOficina" style="display: none;">
+                  <input type="text" value="site" name="dsCanal" style="display: none;">
+                  
+                  <!-- Name -->
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="form_nome">Nome *</label>
+                      <input type="text" class="form-control" maxlength="100" name="nmCliente">
+                    </div>
+                  </div>
+                  <!-- /End Name --> 
+                  
+                  <!-- email -->
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Email *</label>
+                      <input type="email" class="form-control" maxlength="100" name="dsEmail">
+                    </div>
+                  </div>
+                  <!-- /End email --> 
+                  
+                  <!-- telcomercial -->
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Telefone </label>
+                      <input type="number" class="form-control" name="nrTelComercial" placeholder="(99) 9999-9999">
+                    </div>
+                  </div>
+                  <!-- /End telcomercial --> 
+                  
+                  <!-- celular -->
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Celular *</label>
+                      <input type="number" class="form-control" name="nrTelCelular" placeholder="(99) 99999-9999">
+                    </div>
+                  </div>
+                  <!-- /End celular --> 
+                  
+                  <!-- resposta -->
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Deseja ser contatado via *</label><br>
+                      <select class="form-control" name="dsTipoAtendimento">
+                      <option value="e-mail">E-mail </option>
+                      <option value="telefone">Telefone </option>
+                      <option value="local">Local </option>
+                      <option value="aplicativo">Aplicativo </option>
+                      </select>
+                    </div>
+                  </div>
+                  <!-- /End resposta --> 
+                  
+                  <!-- veiculo -->
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Veículo *</label>
+                      <input type="text" class="form-control" name="dsVeiculo">
+                    </div>
+                  </div>
+                  <!-- /End veiculo --> 
+                  
+                  <!-- Message -->
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label>Mensagem *</label>
+                      <textarea class="form-control" name="dsObservacao" maxlength="2000" placeholder="(Digite aqui sua mensagem e o serviço que deseja solicitar: agendamento de revisão, reparos, insul-film...)"></textarea>
+                    </div>
+                  </div>
+                  <!-- /End Message --> 
+                  
+                  <!-- Submit Button -->
+                  <div class="col-md-12"> 
+                    <!-- Form Group -->
+                    <div class="form-group">
+                      <input type="button" class="btn btn-gfort" id="BTEnvia" value="ENVIAR">
+                    </div>
+                    <!-- /End Form Group --> 
+                  </div>
+                  <!-- /End Submit Button -->
+                </form>
+                <!-- /End Form --> 
+              </div>
+              <!-- /End Form Block Container --> 
+            </div>
+            <!-- /End Contact Form Block --> 
+          </div>
+          <!-- /End col-md-12 --> 
+        </div>
+        <!-- /End Modal Body --> 
+        
+      </div>
+      <!-- /End Modal Content --> 
+    </div>
+    <!-- /End Modal Dialog --> 
+  </div>
+  <!-- ======================================  /End ASSIST PROBLIND  ====================================== -->
+
+
+
+
+
+SCRIPT PARA ENVIO NO APP
+
+<!-- ======================================  /End SCRIPT  ====================================== -->
+<script>
+      function ConvertFormToJSON(form){
+          var array = jQuery(form).serializeArray();
+          var json = {};
+        
+          jQuery.each(array, function() {
+              json[this.name] = this.value || '';
+          }); 
+        
+          return json;
+      }
+
+    $(document).ready(function(){
+
+        $("#BTEnvia").click(function(){
+          console.log(ConvertFormToJSON($('#formlead')));
+            $.ajax({
+            type : "POST",
+            url :"https://q7api.problind.com.br/api/atendimento/site",
+            data : JSON.stringify(ConvertFormToJSON($('#formlead'))),
+            contentType : "application/json",
+            dataType : 'JSON'
+          }).done(function(data, textStatus, jqXHR) {
+        if(data.msg == "ok"){
+          alert("Obrigado, sua mensagem foi enviada. Em breve entraremos em contato.");
+          location.reload();
+        }else{
+          alert(data.msg);
+        }
+        
+          }).fail(function(jqXHR, textStatus, errorThrown) {
+            alert("Ocorreu um erro inesperado ao processar sua solicitação. Tente novamente mais tarde. Caso o problema persista entre em contato com o suporte.");
+          });
+           /* $.post(
+              ,
+               ConvertFormToJSON($('#formlead')),
+            
+              function(data,status){
+                  alert("Data: " + data + "\nStatus: " + status);
+            });*/
+        });
+    }); 
+ </script>
+<!-- ======================================  /End SCRIPT  ====================================== -->

@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Integração API - LEADs</title>
+    <style>
+        input {
+            height: 30px;
+            width: 400px;
+        }
+
+        select {
+            height: 30px;
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+<div id="retorno"></div>
+<form id="formlead" action="#" novalidate="novalidate">
+
+    <!-- CANAL -->
+    <input type="hidden" name="dsCanal" value="site">
+
+    <table width="100%" cellpadding="5" cellspacing="5">
+        <tr>
+            <td width="150px">Interesse Atendimento</td>
+            <td>
+                <select name="dsInteresse" placeholder="Selecione um Interesse">
+                    <option value="">Selecione uma opção...</option>
+                    <option value="Blindagem">Blindagem</option>
+                    <option value="Assist. Técnica">Assistência Técnica</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td width="150px">Nome</td>
+            <td>
+                <input type="text" name="nmCliente" value="" placeholder="Digite seu nome">
+            </td>
+        </tr>
+        <tr>
+            <td>E-mail</td>
+            <td>
+                <input type="text" name="dsEmail" value="" placeholder="Digite seu email">
+            </td>
+        </tr>
+        <tr>
+            <td>Telefone comercial</td>
+            <td>
+                <input type="text" name="nrTelComercial" value="" placeholder="Digite telefone comercial">
+            </td>
+        </tr>
+        <tr>
+            <td>Telefone celular</td>
+            <td>
+                <input type="text" name="nrTelCelular" value="" placeholder="Digite telefone celular">
+            </td>
+        </tr>
+        <tr>
+            <td>Veículo</td>
+            <td>
+                <input type="text" name="dsVeiculo" value="" placeholder="Digite modelo do veículo ">
+            </td>
+        </tr>
+        <tr>
+            <td width="150px">Tipo do Atendimento</td>
+            <td>
+                <select name="dsTipoAtendimento" placeholder="Selecione uma opção">
+                    <option value="">Selecione uma opção...</option>
+                    <option value="e-mail">E-mail</option>
+                    <option value="telefone">Telefone</option>
+                    <option value="local">Local</option>
+                    <option value="aplicativo">Aplicativo</option>
+					<option value="landingpage">Landing Page</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Mensagem</td>
+            <td>
+				<textarea name="dsObservacao" value="" placeholder="Digite a mensagem"
+                          style="width:400px;height:80px;"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input id="btnsubmit" type="button" value="Enviar"
+                       style="height:40px;background-color: black;color:#ffffff;">
+            </td>
+        </tr>
+
+    </table>
+
+</form>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    function ConvertFormToJSON(form) {
+        var array = jQuery(form).serializeArray();
+        var json = {};
+
+        jQuery.each(array, function () {
+            json[this.name] = this.value || '';
+        });
+
+        return json;
+    }
+
+    $(document).ready(function () {
+
+        $("#btnsubmit").click(function () {
+
+            $.ajax({
+                type: "POST",
+                url: "https://leandrini.problind.com.br/api/atendimento/site",
+                data: JSON.stringify(ConvertFormToJSON($('#formlead'))),
+                contentType: "application/json",
+                dataType: 'JSON'
+            }).done(function (data, textStatus, jqXHR) {
+              /*  console.log("LEAD salvo com sucesso");
+                $("#retorno").html("Obrigado, seu atendimento foi salvo com sucesso! \nEm breve entraremos em contato.");*/
+                if(data.msg == "ok"){
+					             alert("Obrigado, sua mensagem foi enviada. Em breve entraremos em contato.");
+					                  location.reload();
+				        }else{
+					             alert(data.msg);
+				        }
+            }).fail(function (jqXHR, textStatus, errorThrown) {
+                console.log(jqXHR);
+                console.log(textStatus);
+                console.log(errorThrown);
+                $("#retorno").html("Erro:" + textStatus);
+            });
+        });
+    });
+</script>
+</html>
